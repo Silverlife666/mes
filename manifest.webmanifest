@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "MES Produkcja",
+  "short_name": "MES",
+  "description": "System zarządzania produkcją: etapy, hala i karty pracy.",
+  "lang": "pl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eef4f9",
+  "theme_color": "#103967",
+  "icons": [
+    {"src":"icons/mes-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"},
+    {"src":"icons/mes-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"maskable"}
+  ]
+}

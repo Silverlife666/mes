@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MES · Panel główny</title>
+  <meta name="theme-color" content="#103967">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/mes-icon.svg" type="image/svg+xml">
+  <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(console.warn)</script>
+  <style>
+    :root{--navy:#103967;--blue:#075bbb;--ink:#142b45;--muted:#66778b;--line:#c7d7e7;--bg:#eef4f9;--current:#e1f4e7}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}header{background:var(--navy);color:#fff;padding:18px clamp(18px,4vw,52px);display:flex;justify-content:space-between;align-items:center;gap:18px;box-shadow:0 2px 7px #001d3c38}.brand{display:flex;align-items:center;gap:11px}.brand-icon{font-size:25px}.brand h1{font-size:19px;margin:0}.brand p{margin:2px 0 0;color:#bdd0e4;font-size:12px}.status{font-size:12px;color:#d5e4f3;border:1px solid #ffffff4d;border-radius:20px;padding:5px 10px;white-space:nowrap}main{max-width:1120px;margin:clamp(26px,5vw,56px) auto;padding:0 18px 40px}.dashboard{background:#fff;border:1px solid var(--line);border-radius:11px;padding:clamp(20px,4vw,34px);box-shadow:0 6px 24px #19375612}.title{display:flex;gap:10px;align-items:center}.title h2{margin:0;font-size:18px}.intro{margin:8px 0 26px;padding-bottom:18px;border-bottom:1px solid #dce6ef;color:var(--muted)}.modules{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:16px}.module{display:flex;flex-direction:column;min-height:248px;padding:20px;border:1px solid var(--line);border-radius:7px;background:#fff;text-decoration:none;color:inherit;transition:.18s ease}.module:hover,.module:focus-visible{border-color:var(--blue);box-shadow:0 7px 18px #0b4d9422;transform:translateY(-2px);outline:none}.module.current{background:#fbfefc;border-color:#acdcb9}.name{font-size:16px;font-weight:750;color:var(--ink);margin-bottom:10px}.desc{margin:0;color:#58697b;font-size:13px;line-height:1.5;flex:1}.button{display:block;margin-top:21px;border-radius:4px;background:var(--blue);color:#fff;text-align:center;font-size:13px;font-weight:700;padding:9px 12px}.module:hover .button{background:#034a9c}.tag{display:inline-block;align-self:flex-start;margin-top:13px;padding:3px 8px;background:var(--current);color:#207a3b;font-size:11px;font-weight:700;border-radius:12px}.flow{margin-top:27px;padding-top:21px;border-top:1px solid #dce6ef}.flow h3{font-size:14px;margin:0 0 9px}.flow p{margin:0;color:var(--muted);font-size:13px}.flow b{color:var(--navy)}footer{text-align:center;padding:18px;color:#718296;font-size:12px;background:#fff;border-top:1px solid var(--line)}@media(max-width:560px){header{align-items:flex-start}.status{display:none}.module{min-height:210px}.modules{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header><div class="brand"><span class="brand-icon">🏭</span><div><h1>MES · Panel główny</h1><p>System zarządzania produkcją</p></div></div><span class="status">wersja testowa</span></header>
+  <main><section class="dashboard" aria-labelledby="modules-heading"><div class="title"><span aria-hidden="true">📋</span><h2 id="modules-heading">Dostępne moduły produkcyjne</h2></div><p class="intro">Wybierz etap procesu albo widok hali. Każdy moduł ma również tę samą nawigację do pozostałych obszarów MES.</p><div class="modules">
+    <a class="module" href="https://silverlife666.github.io/Bobina/"><div class="name">🌀 Etap 1 · Rolsiarka</div><p class="desc">Rejestracja produkcji bobin, zleceń, zużycia materiału i odpadów.</p><span class="button">Otwórz etap</span></a>
+    <a class="module" href="https://silverlife666.github.io/pakowanie/"><div class="name">📦 Etap 2 · Pakowanie</div><p class="desc">Obsługa pakowania oraz przekazywanie wykonanych zleceń do dalszego procesu.</p><span class="button">Otwórz etap</span></a>
+    <a class="module" href="https://silverlife666.github.io/klejenie/"><div class="name">🧴 Etap 3 · Klejenie</div><p class="desc">Rejestracja pracy i realizacji zleceń na etapie klejenia.</p><span class="button">Otwórz etap</span></a>
+    <a class="module" href="https://silverlife666.github.io/hala/"><div class="name">🏭 Hala · przegląd zleceń</div><p class="desc">Zbiorczy widok bieżącej produkcji i postępu zleceń ze wszystkich etapów.</p><span class="button">Otwórz halę</span></a>
+    <a class="module current" href="https://silverlife666.github.io/karta/"><div class="name">🗒️ Elektroniczna Karta Pracy</div><p class="desc">Cyfrowa karta do szybkiego rejestrowania pracy, podsumowań oraz statystyk zmian.</p><span class="tag">● nowy moduł</span><span class="button">Uruchom moduł</span></a>
+    <a class="module" href="https://silverlife666.github.io/Harmonogram/"><div class="name">📅 Harmonogram · Grafik</div><p class="desc">Planowanie obsady, zmian i grafików pracy zespołów produkcyjnych.</p><span class="button">Otwórz harmonogram</span></a>
+    <a class="module" href="https://silverlife666.github.io/dostawyozadania/"><div class="name">⚙️ Harmonogram · Administracja</div><p class="desc">Zarządzanie danymi i ustawieniami modułu harmonogramów.</p><span class="button">Otwórz administrację</span></a>
+  </div><div class="flow"><h3>Przepływ pracy</h3><p><b>Rolsiarka</b> → <b>Pakowanie</b> → <b>Klejenie</b> · Hala pokazuje całość, a Karta pracy służy do rozliczenia pracy operatorów.</p></div></section></main>
+  <footer>MES · wersja testowa · 2026</footer>
+</body>
+</html>
